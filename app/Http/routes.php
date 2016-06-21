@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', ['as' => 'index']);
+
+Route::group(['prefix' => 'auth'], function () {
+	Route::get('login', ['as' => 'auth.login', 'uses' => 'Auth\\AuthController@getLogin']);
+	Route::post('login', ['as' => 'auth.login.post', 'uses' => 'Auth\\AuthController@postLogin']);
+	Route::get('register', ['as' => 'auth.register', 'uses' => 'Auth\\AuthController@getRegister']);
+	Route::post('register', ['as' => 'auth.register.post', 'uses' => 'Auth\\AuthController@postRegister']);
+	Route::any('logout', ['as' => 'auth.logout', 'uses' => 'Auth\\AuthController@logout']);
 });
+
+Route::resource('users', 'UserController');
