@@ -18,11 +18,19 @@
 @section('content')
 	<div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
 		<div class="well">
+			@include('components.error')
+
 			{!! Form::open(['class' => 'form-horizontal']) !!}
 			<div class="form-group">
 				{!! Form::label('email', L("email_address"), ['class' => 'col-sm-2 control-label']) !!}
 				<div class="col-sm-10">
 					{!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => L('email_placeholder')]) !!}
+				</div>
+			</div>
+			<div class="form-group">
+				{!! Form::label('name', L("name"), ['class' => 'col-sm-2 control-label']) !!}
+				<div class="col-sm-10">
+					{!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => L('name_placeholder')]) !!}
 				</div>
 			</div>
 			<div class="form-group">
@@ -32,9 +40,9 @@
 				</div>
 			</div>
 			<div class="form-group">
-				{!! Form::label('password_confirm', L("password"), ['class' => 'col-sm-2 control-label']) !!}
+				{!! Form::label('password_confirmation', L("password"), ['class' => 'col-sm-2 control-label']) !!}
 				<div class="col-sm-10">
-					{!! Form::password('password_confirm', ['class' => 'form-control', 'placeholder' => L('password_confirm_placeholder')]) !!}
+					{!! Form::password('password_confirmation', ['class' => 'form-control', 'placeholder' => L('password_confirm_placeholder')]) !!}
 				</div>
 			</div>
 			<div class="form-group">

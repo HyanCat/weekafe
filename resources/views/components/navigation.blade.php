@@ -21,12 +21,19 @@
 		</div>
 
 		<div class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
-				<li><a href="#">Link <span class="sr-only">(current)</span></a></li>
-				<li><a href="#">Link</a></li>
-			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Name</a></li>
+				@if ($currentUser)
+					<li>
+						<a>{{ $currentUser->name }}</a>
+					</li>
+					<li>
+						<a href="{{ route('auth.logout') }}">{{ L('logout') }}</a>
+					</li>
+				@else
+					<li>
+						<a href="{{ route('auth.login') }}">{{ L('login') }}</a>
+					</li>
+				@endif
 			</ul>
 		</div>
 	</div>

@@ -17,6 +17,7 @@ class CreateInviteCodesTable extends Migration
 		Schema::create($this->table, function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('invite_code')->unique();
+			$table->integer('user_id')->nullable();
 			$table->integer('owner_id')->nullable();
 			$table->boolean('active')->default(false);
 

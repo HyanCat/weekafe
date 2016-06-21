@@ -14,13 +14,14 @@
 
 	@yield('header')
 	@include('components.navigation')
+
 	<div class="body container">
-		<div class="main-section container">
+		<div class="main-section container" style="min-height: 400px;">
 			@yield('content')
 		</div>
 	</div>
 
-	<div class="ui section divider"></div>
+	<hr>
 
 	@yield('footer')
 

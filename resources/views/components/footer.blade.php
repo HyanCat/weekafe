@@ -8,7 +8,6 @@
  */
 ?>
 
-<hr>
 <div class="footer">
 	<div class="copyright center-block" style="text-align: center;">
 		Copyright © 2015 Weekafe. Powered by <a href="">Weekafe</a>.
