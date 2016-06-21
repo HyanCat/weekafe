@@ -12,9 +12,12 @@ class Controller extends BaseController
 {
 	use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
 
+	protected $currentUser;
+	protected $currentUserId;
+
 	public function __construct()
 	{
-		$currentUser = \Auth::user();
-		\View::share('currentUser', $currentUser);
+		$this->currentUser   = \Auth::user();
+		$this->currentUserId = \Auth::id();
 	}
 }

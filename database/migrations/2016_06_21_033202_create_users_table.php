@@ -21,7 +21,6 @@ class CreateUsersTable extends Migration
 			$table->string('password');
 			$table->string('remember_token')->nullable();
 			$table->string('invite_code_id')->nullable();
-			$table->boolean('is_founder')->default(false);
 			$table->boolean('is_admin')->default(false);
 
 			$table->softDeletes();
@@ -46,10 +45,10 @@ class CreateUsersTable extends Migration
 	protected function seedBasicData()
 	{
 		\App\Models\User::create([
-			'email'      => env('FOUNDER_EMAIL', 'founder@weekafe.com'),
-			'name'       => env('FOUNDER_NAME', 'founder'),
-			'password'   => Hash::make(env('FOUNDER_PASSWORD', 'weekafe')),
-			'is_founder' => true,
+			'email'    => env('FOUNDER_EMAIL', 'founder@weekafe.com'),
+			'name'     => env('FOUNDER_NAME', 'founder'),
+			'password' => Hash::make(env('FOUNDER_PASSWORD', 'weekafe')),
+			'is_admin' => true,
 		]);
 	}
 }
