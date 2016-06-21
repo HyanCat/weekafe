@@ -26,4 +26,6 @@ return [
 	'goto_register' => '前往注册',
 	'invite_code'   => '邀请码',
 
+	'new'          => '新建',
+	'write_weekly' => '写周报',
 ];

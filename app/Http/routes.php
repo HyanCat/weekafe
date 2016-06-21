@@ -22,3 +22,4 @@ Route::group(['prefix' => 'auth'], function () {
 });
 
 Route::resource('users', 'UserController');
+Route::resource('weeklies', 'WeeklyController');

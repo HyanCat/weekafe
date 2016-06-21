@@ -23,11 +23,29 @@
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
 				@if ($currentUser)
-					<li>
-						<a>{{ $currentUser->name }}</a>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ L('new') }}
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li>
+								<a href="{{ route('weeklies.create') }}">{{ L('write_weekly') }}</a>
+							</li>
+						</ul>
 					</li>
-					<li>
-						<a href="{{ route('auth.logout') }}">{{ L('logout') }}</a>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ $currentUser->name }}
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li class="dropdown-header">
+								{{ $currentUser->email }}
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="{{ route('auth.logout') }}">{{ L('logout') }}</a>
+							</li>
+						</ul>
 					</li>
 				@else
 					<li>

@@ -25,4 +25,7 @@ return [
 	'goto_register'           => 'Goto Register',
 	'invite_code'             => 'Invite Code',
 	'invite_code_placeholder' => 'Input your invite code',
+
+	'new'          => 'New',
+	'write_weekly' => 'write',
 ];
