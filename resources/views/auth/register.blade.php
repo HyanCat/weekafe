@@ -13,8 +13,6 @@
 	{{ L('register') }}
 @stop
 
-@section('navtitle') {{ L('register') }} @stop
-
 @section('content')
 	<div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
 		<div class="well">

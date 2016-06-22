@@ -24,7 +24,8 @@
 			<ul class="nav navbar-nav navbar-right">
 				@if ($currentUser)
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ L('new') }}
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="glyphicon glyphicon-plus"></i>
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -34,7 +35,8 @@
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ $currentUser->name }}
+						<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="glyphicon glyphicon-user"></i>
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
